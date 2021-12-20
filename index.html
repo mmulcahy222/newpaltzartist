@@ -1,0 +1,730 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Howard Miller, local New Paltz artist</title>
+
+
+    <style type="text/css">
+        body {
+            font: 100% Verdana, Arial, Helvetica, sans-serif;
+            margin: 0;
+            /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+            padding: 0;
+            text-align: center;
+            /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+            color: #000000;
+            height: 100%;
+            background-color: #000000;
+            background-image: url('images/footer-repeat.jpg');
+            background-repeat: repeat;
+        }
+
+        div {
+            margin: 0px;
+            border: 0;
+        }
+
+        li {
+            list-style-type: none;
+            display: block;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        img {
+            margin: 0px;
+            padding: 0px;
+            border: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            list-style-image: none;
+            padding: 0px;
+            margin: 0px;
+            height: auto;
+        }
+
+        a {
+            outline: none;
+        }
+
+        #container {
+            text-align: left;
+            /* this overrides the text-align: center on the body element. */
+            background-color: #000000;
+        }
+
+        #header {
+            height: 157px;
+            background-image: url("images/header_repeat.jpg");
+            background-repeat: repeat-x;
+            width: auto;
+            margin: auto;
+        }
+
+        #header #headerleft {
+            background-image: url("images/header_left.jpg");
+            background-repeat: repeat-x;
+            height: 157px;
+            width: 780px;
+            margin: 0;
+        }
+
+        #sidebar1 {
+            float: left;
+            /* since this element is floated, a width must be given */
+            width: 271px;
+            background-image: url("images/sidebar_repeat_3_blocks_740.jpg");
+            background-repeat: repeat-y;
+            height: 1480px;
+            margin: 0;
+            display: block;
+        }
+
+        #menu #home {
+            background-image: url("images/menu_resume.jpg");
+            background-repeat: no-repeat;
+            height: 38px;
+            width: 271px;
+            display: block;
+        }
+
+        #menu #galleries {
+            background-image: url('images/menu_galleries.jpg');
+            height: 48px;
+            width: 271px;
+            display: block;
+        }
+
+        #menu #artiststatement {
+            background-image: url('images/menu_artist.jpg');
+            height: 43px;
+            width: 271px;
+            display: block;
+        }
+
+        #menu #contact {
+            background-image: url('images/menu_contact.jpg');
+            background-repeat: no-repeat;
+            height: 44px;
+            width: 271px;
+            display: block;
+        }
+
+        #mainContent {
+            z-index: 3;
+            height: 1478px;
+            display: block;
+            margin-left: 271px;
+            /*main property that was responsible*/
+            position: relative;
+            border-top-width: 1px;
+            border-right-width: 0px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+            border-top-style: solid;
+            border-right-style: none;
+            border-bottom-style: solid;
+            border-left-style: solid;
+            border-top-color: #3D403B;
+            border-right-color: #3D403B;
+            border-bottom-color: #3D403B;
+            border-left-color: #3D403B;
+            background-image: url('images/blue_repeat.jpg');
+            background-repeat: repeat;
+            color: #D0B45E;
+            font-size: 15px;
+            width: auto;
+            overflow: hidden;
+        }
+
+        #mainContent p {
+            margin-left: 15px;
+            margin-top: 15px;
+            margin-right: 15px;
+            text-align: justify;
+        }
+
+        #millerimage {
+            float: left;
+            margin-right: 15px;
+        }
+
+        #mainContentHome {
+            display: block;
+        }
+
+        #mainContentHome p {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            font-size: 11px;
+            margin-bottom: -10px;
+        }
+
+        #mainContentHome .newsection {
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: -5px;
+            text-decoration: underline;
+        }
+
+        #mainContentGalleries {
+            display: block;
+        }
+
+        #mainContentArtistStatement {
+            display: none;
+        }
+
+        #mainContentContact {
+            display: none;
+        }
+
+        .gallerychoicemenu {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: #333333;
+            height: 25px;
+            width: inherit;
+            overflow: hidden;
+        }
+
+        .gallerychoicemenu a {
+            list-style-type: none;
+            outline: none;
+            text-decoration: none;
+            color: #888888;
+            font-size: 12px;
+            border-right-width: 1px;
+            border-right-style: solid;
+            border-right-color: #666666;
+            display: inline;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .gallerychoicemenu a:hover {
+            color: #FF0000;
+        }
+
+        .picturediv {
+            height: 120px;
+            width: 120px;
+            float: left;
+            background-color: #000B12;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .picturediv img {
+            cursor: pointer;
+            margin-top: 24px;
+        }
+
+        .colorbackground {
+            height: 120px;
+            width: 120px;
+            position: absolute;
+        }
+
+        .imageclickable {
+            left: 0px;
+            right: 0px;
+            position: relative;
+        }
+
+        .clearfloat {
+            /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+            clear: both;
+            margin: 0;
+            background-color: #00FFFF;
+        }
+
+        #footer {
+            height: 222px;
+            background-color: black;
+            background-image: url('images/footer-repeat.jpg');
+            background-repeat: repeat-x;
+            width: auto;
+            overflow: hidden;
+            clear: both;
+        }
+
+        #footer #footerleft {
+            background-image: url('images/footer_left.jpg');
+            height: 231px;
+            width: 884px;
+            margin: 0;
+            position: relative;
+        }
+
+        #advertisement {
+            color: #FFFFFF;
+            background-color: #090A07;
+            font-size: 10px;
+            position: absolute;
+            top: 91%;
+        }
+
+        #video_inner_div {
+            color: #E5BF52;
+            padding: 12px 20px;
+            text-align: right;
+            font-family: verdana;
+            font-size: 15px;
+        }
+
+        #video_inner_div {
+            height: 100%;
+        }
+
+        #video_link {
+            text-decoration: none;
+            color: #E5BF52;
+            font-size: 17px
+        }
+
+        -->
+    </style>
+    <!--[if IE]>
+<style type="text/css"> 
+/* place css box model fixes for IE 5* in this conditional comment */
+#sidebar1 {height: 1480px; width: 271px; float: left; display: block;}
+</style>
+<![endif]-->
+    <!--[if IE]>
+<style type="text/css"> 
+/* place css fixes for all versions of IE in this conditional comment */
+#mainContent {margin: 0; position: relative; float: left; display: block;}
+/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
+#
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+	margin: 0;
+	background-color: #00FFFF;
+</style>
+<![endif]-->
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script  type="text/javascript" defer>
+        //vertically aligns picture inside each gallery div
+        function verticalalign(para) {
+            var welks = 60 - ($(para).height() / 2);
+            var welks_px = welks + "px";
+            $(para).css('margin-top', welks_px);
+        }
+        //alters the main content box 
+        function maincontent(section) {
+            $("#mainContentInnerHtml").children().hide();
+            ///transitions
+            if (section == "home") {
+                $("#mainContentHome").fadeIn(1000);
+            }
+            if (section == "galleries") {
+                $("#mainContentGalleries").show();
+                //vertical align upon filter request
+                $(".imageclickable").each(function() {
+                    verticalalign(this);
+                });
+                //gallery background-color alternate background color
+                $(".picturediv:even").css("background-color", "#0A041B");
+            }
+            if (section == "artiststatement") {
+                $("#mainContentArtistStatement").fadeIn(1000);
+            }
+            if (section == "contact") {
+                $("#mainContentContact").fadeIn(1000);
+            }
+            changeheight(section);
+        } //end of main content function
+        function changeheight(section) {
+            //dynamically changes the height to something to make the sidebar transition
+            //to footer seamless, changes the height to a higher number divisile to 270
+            if (section == "home") {
+                newheight = 271;
+                newheight = seamlessheight($("#mainContentInnerHtml").height());
+                if (newheight == 0) {
+                    newheight = 3000;
+                }
+            }
+            if (section == "galleries") {
+                newheight = seamlessheight(getgalleryheight());
+            }
+            if (section == "artiststatement") {
+                newheight = 271;
+            }
+            if (section == "contact") {
+                newheight = 271;
+            }
+            getgalleryheight();
+            $("#mainContent").height(newheight);
+            $("#sidebar1").height(newheight + 2);
+        }
+
+        function getgalleryheight() {
+            var numberinrow = Math.floor($("#mainContent").width() / $(".picturediv").width());
+            var numberofrows = (Math.floor(($(".picturediv").size()) / numberinrow) + 1);
+            var pixels = numberofrows * ($(".picturediv").height());
+            return pixels;
+        }
+
+        function seamlessheight(a) //makes sure the transition of side pattern meshes well with footer
+        {
+            if (a == $(".picturediv").height()) {
+                return 271;
+            } // one row
+            if (a == $(".picturediv").height() * 2) {
+                return 300;
+            } //two rows
+            if (((a % 740) == 0) || ((a % 740) == 270)) {} else if ((a % 740) < 270) {
+                a = a - (a % 740) + 268;
+            } else if ((a % 740) > 270) {
+                a = a - (a % 740) + 738;
+            }
+            return a;
+        }
+        //filter the galleries
+        var miller_json = {}
+        async function filter(jsartattribute, jsartvalue) {
+            hovercounter = 0;;
+
+            //get json at miller_art.json in plain javascript
+            miller_json = await $.getJSON("miller_art.json");
+            //filter the json so the jsartvalue is equal to ANY inside the type attribute
+            //use ES6 Arrow Functions
+            var filtered_json = miller_json.filter(item => item["type"].some(i => i == jsartvalue));
+            if(jsartvalue == "all"){
+                filtered_json = miller_json;
+            }
+
+            $("#mainContent").bind('mouseover', function() {
+                hovercontent();
+            });
+
+            filtered_html = '';
+            for (var i = 0; i < filtered_json.length; i++) {
+                item = filtered_json[i];
+                id = item["id"];
+                description = item["description"];
+                filtered_html += `<div class="picturediv"><a href="javascript:generate_center_overlay(${id},'${description}')" class="" border=0><div class="colorbackground"></div><div style="text-align: center"><img class="imageclickable" src="art/Miller_Howard_${id}_t.jpg"></div></a></div>`;
+            }
+
+            $("#gallerydiv").html(filtered_html);
+
+            maincontent("galleries");
+            
+            transitions();
+            //if img doesn't load, delete the picturediv
+            $("#gallerydiv img").bind('error', function() {
+                $(this).parent().parent().parent().remove();
+            });
+            setTimeout("$('.imageclickable').each(function () {verticalalign(this);});", 200);
+        }
+
+        function generate_center_overlay(id,description)
+        {
+            overlay = document.createElement("div");
+            overlay.id = "center_overlay";
+            overlay.style.position = "absolute";
+            //width 400, height 400, CENTER of page
+            overlay.style.width = "600px";
+            overlay.style.height = "500px";
+            overlay.style.top = "50%";
+            overlay.style.left = "50%";
+            overlay.style.marginLeft = "-300px";
+            overlay.style.marginTop = "-250px";
+            overlay.style.backgroundColor = "rgba(33,0,0,0.9)";
+            overlay.style.zIndex = "100";
+            overlay.style.display = "block";
+
+            inner = document.createElement("div");
+            //make this a relative div INSIDE the overlay
+            inner.style.position = "relative";
+            inner.style.padding = "10px";
+            // inner.style.width = "100%";
+            // inner.style.backgroundColor = "rgba(33,77,0,0.9)";
+            inner.style.zIndex = "100";
+            inner.style.display = "block";
+            inner.style.color = "#FD373F";
+            inner.style.fontFamily = "Verdana, Arial, Helvetica, sans-serif";
+            inner.style.fontSize = "14px";
+
+            //            IF YOU NEED THE DESCRIPTION
+            //
+            inner.innerHTML = `<div style="text-align: center;"><img src="art/Miller_Howard_${id}_original.jpg"></div><div style="text-align: center;">${description}</div>`;
+
+
+            overlay.appendChild(inner);
+  
+
+
+            body = document.getElementsByTagName("body")[0];
+            document.body.appendChild(overlay);     
+        }
+
+        //concerns the generate_center_overlay function
+        //if you click outside the window, it closes
+        window.onload = () => {
+            body_element = document.getElementsByTagName("body")[0];
+            body_element.onclick = function () {
+                if (event.target.id != "center_overlay") {
+                    //remove center_overlay
+                    center_overlay = document.getElementById("center_overlay");
+                    body.removeChild(center_overlay);
+                }
+            }
+        };
+        
+        
+        
+        function hovercontent() {
+            $(".imageclickable").each(function() {
+                verticalalign(this);
+            });
+            hovercounter++;
+            if (hovercounter == 5) {
+                $("#mainContent").unbind('mouseover');
+            }
+        }
+
+        function transitions() {
+            //gallery gets colorful when hovering 
+            $(".picturediv a").hover(
+                function() {
+                    third = $(".picturediv a").index(this) % 3;
+                    if (third == 0) {
+                        colorurl = "url('images/blueshadow_120.jpg')";
+                    }
+                    if (third == 1) {
+                        colorurl = "url('images/pinkshadow_120.jpg')";
+                    }
+                    if (third == 2) {
+                        colorurl = "url('images/orangeshadow_120.jpg')";
+                    }
+                    var colorbackgrounddiv = $(this).children().children(".colorbackground");
+                    $(this).children(".colorbackground").css("background-image", colorurl);
+                    $(this).children(".colorbackground").fadeIn(800);
+                },
+                function() {
+                    $(this).children(".colorbackground").hide().fadeOut(0);
+                }
+            );
+        }
+
+        function pause() {
+            var ytv = document.getElemenyById('you_tube_video');
+            ytv.pauseVideo();
+        }
+        //start initializer function
+        $
+            (
+                function() {
+                    maincontent("galleries");
+                    //maincontent width control
+                    if (document.body.clientWidth < 1000) //small resolution
+                    {
+                        $("#sidebar1").height(2960);
+                        $("#mainContent").height(2958);
+                        $("#mainContent").width(document.body.clientWidth - $("#sidebar1").width() - 25);
+                    } else {
+                        $("#mainContent").width(document.body.clientWidth - $("#sidebar1").width() - 5);
+                    }
+                    //chance of vertically aligning better upon hovering over section
+                    $("#mainContent").hover(function() {
+                        hovercontent();
+                    });
+                    //gallery background-color alternate background color
+                    $(".picturediv:even").css("background-color", "#0A041B");
+                    //does something with the links for the facebox code
+                    //call previous function to make squares flash upon over in the galleries section
+                    transitions();
+                    //"recent work" comes up by ajax initially
+                    filter('type', 'portraits');
+                    //highlights menu bar
+                    $("#home").hover(
+                        function() {
+                            $("#home_rollover").fadeIn(300);
+                        },
+                        function() {
+                            $(".rollover").fadeOut(1);
+                        }
+                    );
+                    $("#artiststatement").hover(
+                        function() {
+                            $("#artiststatement_rollover").fadeIn(300);
+                        },
+                        function() {
+                            $(".rollover").fadeOut(1);
+                        }
+                    );
+                    $("#galleries").hover(
+                        function() {
+                            $("#galleries_rollover").fadeIn(300);
+                        },
+                        function() {
+                            $(".rollover").fadeOut(1);
+                        }
+                    );
+                    $("#contact").hover(
+                        function() {
+                            $("#contact_rollover").fadeIn(50);
+                        },
+                        function() {
+                            $(".rollover").fadeOut(1);
+                        }
+                    );
+                    setTimeout("$('.imageclickable').each(function () {verticalalign(this);});", 300);
+                    setTimeout("$('.imageclickable').each(function () {verticalalign(this);});", 1000);
+                    setTimeout("$('.imageclickable').each(function () {verticalalign(this);});", 3500);
+                } //ends JQuery initializing function
+            ); //ends JQuery initializer
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var colorurl = 'url("images/blueshadow_100.jpg")';
+        var third = 0;
+        var newheight = "";
+        var hovercounter = 0;
+        var tworows = 0;
+    </script>
+    <div id="container">
+        <div id="header">
+            <div id="headerleft"> </div>
+            <!-- end #header -->
+        </div>
+        <div id="sidebar1">
+            <div class="menu" style="padding: 0px;">
+                <ul id="menu">
+                    <li id="galleries"><img src="images/menu_galleries_rollover.jpg" class="rollover" id="galleries_rollover" style="display: none;" onclick="maincontent('galleries');" /></li>
+                    <li id="artiststatement"><img src="images/menu_artist_rollover.jpg" class="rollover" id="artiststatement_rollover" style="display: none;" onclick="maincontent('artiststatement');" /></li>
+                    <li id="home"><img src="images/menu_resume_rollover.jpg" class="rollover" id="home_rollover" style="display: none;" onclick="maincontent('home');" /></li>
+                    <li id="contact"><img src="images/menu_contact_rollover.jpg" class="rollover" id="contact_rollover" style="display: none;" onclick="maincontent('contact');" /></li>
+                    <li id="video_bar">
+                        <div id="video_inner_div"><a href="https://www.youtube.com/watch?v=v8crUmBfm_U" target="_blank" id="video_link" rel="facebox">Video Of Art Show</a></div>
+                    </li>
+                </ul>
+                <div id="slide"></div>
+            </div>
+            <!-- end #sidebar1 -->
+        </div>
+        <div id="mainContent">
+            <div id="mainContentInnerHtml">
+                <!-- start #mainContentInnerHtml -->
+                <div id="mainContentHome">
+                    <p align="center" style="font-size: 16px; text-align: center">HOWARD JERALD MILLER<br />
+                        <span style="font-size: 16px">701 Briarwood Court</span><br />
+                        New Paltz, New York 12561<br />
+                        <span style="font-size: 17px">845-857-9858</span><br />
+                        millerjhoward@yahoo.com
+                    </p>
+                    <p class="newsection">Objective:</p>
+                    <p>Professional Artist, Art Restoration</p>
+                    <p class="newsection">Summary of Experience: </p>
+                    <p>• Thirty years experience in commercial and private sector painting, plastering, and wall restoration in 18th &amp; 19th century homes. </p>
+                    <p>• Molding restoration and taping new homes. </p>
+                    <p>• Decorative finishes: marbleizing, wood graining, glazing and murals.</p>
+                    <p>• Antique photograph restoration and furniture restoration </p>
+                    <p>• Taught Art at Bank Street School in NYC as a temp in 1980 for a friend.</p>
+                    <p>• Taught Art to senior citizens in Sullivan County, at a Senior Citizen Center.</p>
+                    <p>• Some private teaching in Sullivan and Ulster countries. </p>
+                    <p class="newsection">Art Education: </p>
+                    <p>• Art Students League of New York City. Studied with Huey Lee Smith, Isaac Sawyer and Robert Beverly Hale: received three scholarships. </p>
+                    <p>• School of Visual Arts, New York City </p>
+                    <p>• New School for Social Research. Studied with Meneru Kawabata </p>
+                    <p>• Ulster County Community College/Computer Arts </p>
+                    <p class="newsection">Exhibited &amp; Published Work:</p>
+                    <p> • Unframed Artists Gallery, New Paltz, NY The Group Shows 2007</p>
+                    <p>• The Bakery, New Paltz, NY - One Man Show: July 2006 </p>
+                    <p>• Pasquales Pizza, New Paltz, NY - Mural paintings Interior &amp; Exterior of building: 2005-06 </p>
+                    <p>• Starbucks Café, New Paltz, NY - One Man Show: July 2005 </p>
+                    <p>• Colony Café in Woodstock, NY - One Man Show: Nov 2004 </p>
+                    <p>• Hillside Manor, Kingston, NY - Mural Painting: 2003 </p>
+                    <p>• Mountain Motors Audi Dealership, Kingston, NY - Mural Painting: 2002 </p>
+                    <p>• Hans Auto Body Shop, New Paltz, NY - Mural, Painting: 2001 </p>
+                    <p>• Ulster Savings Bank, New Paltz, NY - One Man Show: 2000 </p>
+                    <p>• Starbucks Café, New Paltz, NY - One Man Show: 2000 </p>
+                    <p>• Skies The Limit, Kingston, NY </p>
+                    <p>• Woodstock Artist Association, Three Man Shows: 1996-97 </p>
+                    <p>• Published work in Darshan, an International Spiritual Magazine - December 1993 </p>
+                    <p>• Catskill Art Society, Hurleyville, NY Group Show: 1990 &amp; 91 • Unitarian Society, Rock Tavern, NY - One Man Show: 1992</p>
+                    <p>• La Manna La Galleria, NYU City - Group Show: 1991 </p>
+                    <p>• Gelabert Studios, NY City - Group Shows: 1991</p>
+                    <p>• Accepted for Shows at the Roerich Musseum, NY City, 1991 </p>
+                    <p>• Catskill Art Society, Hurleyville, New York - Group Show: 1990 &amp; 91 </p>
+                    <p>• Catskill Art Society, Hurleyville, New York - Group Show: 1990 &amp; 91 </p>
+                    <p>• Art Students League of New York City - Group Show: 1978, 79 &amp; 82 </p>
+                    <p class="newsection"> Extras in Three Films: </p>
+                    <p>• “Black Widow” – with Willem Dafoe – Stoneridge, NY </p>
+                    <p>• “Down to the Bone” – with Vera Famiga – Kingston, NY </p>
+                    <p>• “Sparky Bob” – A film made by Columbia University Graduates – New Paltz. NY </p>
+                    <p>• “Peace Love & Misunderstanding” – with Jane Fonda, Katherine Keener. Director: Bruce Bearsford </p>
+                    <p class="newsection">Collectors: </p>
+                    <p>• Mother of actor Matt Dillon </p>
+                    <p>• Trudi Vogel, former wife of writer Nat Hentoff </p>
+                    <p>• Frank Gannon, former writer for Richard Nixon &amp; David Letterman</p>
+                    <p class="newsection">Awards &amp; Scholarships: </p>
+                    <p>• Multiple Scholarships to Art Students League of New York </p>
+                    <p> • Awarded Membership in Woodstock Artist Association Incorporated in 1996 </p>
+                    <p>• Artist Grant Recipient in 2007 </p>
+                    <p class="newsection">Military Experience: </p>
+                    <p>• United States Navy: 1963-1967 </p>
+                    <p>• Honorable Discharge Extras: </p>
+                    <p>• Work Shown on New Paltz Public Access during personal interview at public event: 2008 </p>
+                    <p class="newsection"></p>
+                </div>
+                <div id="mainContentGalleries">
+                    <div class="gallerychoicemenu" id="menu_one">
+                        <div id="idiv" style="margin: 4px; vertical-align: middle">
+                            <a href="#" onclick="filter('type', 'portraits');">Portraits</a>
+                            <a href="#" onclick="filter('type', 'landscapes');">Landscapes</a>
+                            <a href="#" onclick="filter('type', 'murals');">Murals</a>
+                            <a href="#" onclick="filter('type', 'abstracts');">Abstracts</a>
+                            <a href="#" onclick="filter('type', 'still_life');">Still Life</a>
+                        </div>
+                    </div>
+                    <div class="gallerychoicemenu" id="menu_two">
+                        <div id="idiv" style="margin: 3px; vertical-align: middle">
+                            <a href="#" onclick="filter('type', 'furniture');">Furniture</a>
+                            <a href="#" onclick="filter('type', 'drawings');">Drawings</a>
+                            <a href="#" onclick="filter('type', 'surrealism');">Surrealism</a>
+                            <a href="#" onclick="filter('type', 'animal_portraits');">Animal Portraits</a>
+                            <a href="#" onclick="filter('type', 'miscellaneous');">Miscellaneous</a>
+                            <a href="#" style="font-weight: bold" onclick="filter('type', 'all');">All</a>
+                        </div>
+                    </div>
+                    <div id="gallerydiv">
+                        <div class="picturediv"><a href="" border=0 rel="facebox">
+                                <div class="colorbackground"></div>
+                                <div style="text-align: center"><img class="imageclickable"></div>
+                            </a></div>
+                    </div>
+                </div>
+                <div id="mainContentArtistStatement">
+                    <p>Taking an eclectic approach towards surface art in all its creative phases, my goal is to create an illusion of multi-dimensionality on a flat, otherwise lifeless space</p>
+                    <p>By juxtaposing translucent glazes with striking mediums, the outcome is rich and alive - with great definition and textural subtlety.</p>
+                    <p>I also feel that being respectful of the clients needs and vision is crucial to the desired outcome. Time spent in preparation of a desired effect is key to creative the results you are looking for. </p>
+                    <p>Please feel free to call for more information or to set up an appointment.</p>
+                </div>
+                <div id="mainContentContact">
+                    <p>I can be contacted at 845-664-0294 or 845-857-9858</p>
+                </div>
+                <!-- end #mainContentInnerHtml -->
+            </div>
+            <!-- end #mainContent -->
+        </div>
+        <div id="footer">
+            <div id="footerleft"><span id="advertisement">Copyright 2009 © Designed by Mark Mulcahy: opaline222@gmail.com http://www.facebook.com/matrix5</span></div>
+            <!-- end #footer -->
+        </div>
+        <!-- end #container -->
+    </div>
+</body>
+
+</html>
+
+</html>
