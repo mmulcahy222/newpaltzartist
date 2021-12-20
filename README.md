@@ -6,11 +6,11 @@ I had to change all of the parts that had PHP into all JavaScript, and you can b
 
 Since Microsoft was super generous to allow people to put up their portfolio online for free like you're doing right now (so long as it's static without PHP), we have a happy customer in Howard Miller who now has his static site up for all to see, after I proposed that Github idea to him.
 
-![NEW PALTZ ARTIST SITE --- CLICK HERE](https://newpaltzartist.github.io)
+[NEW PALTZ ARTIST SITE --- CLICK HERE](https://newpaltzartist.github.io)
 
 I just really had to change the Filter part of the categories of art, which formerly used PHP, and I used vanille Javascript to dynamically create the overlay when clicking on the artwork rather than relying on the previous library called Facebox. For some reason when I originally did it it was using PHP, but since this was github.io (no PHP/Perl/Python), it was all javascript. Worked out great!
 
-[](images/npa_site.png)
+![](images/npa_site.png)
 
 ```js
 async function filter(jsartattribute, jsartvalue) {
