@@ -10,7 +10,7 @@ Since Microsoft was super generous to allow people to put up their portfolio onl
 
 I just really had to change the Filter part of the categories of art, which formerly used PHP, and I used vanille Javascript to dynamically create the overlay when clicking on the artwork rather than relying on the previous library called Facebox. For some reason when I originally did it it was using PHP, but since this was github.io (no PHP/Perl/Python), it was all javascript. Worked out great!
 
-![](images/npa_site.png)
+[](images/npa_site.png)
 
 ```js
 async function filter(jsartattribute, jsartvalue) {
